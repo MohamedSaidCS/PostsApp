@@ -8,11 +8,11 @@ interface PostCardProps {
 }
 const PostCard: FC<PostCardProps> = ({ post }) => {
 	return (
-		<Link to={''+post.id} key={post.id} className={'flex justify-start gap-4 w-full'}>
-			<img className={'w-1/6'} src={image} alt={'image'} />
+		<Link to={''+post.id} key={post.id} className={'flex flex-col md:flex-row justify-start gap-2 md:gap-4 w-full'}>
+			<img className={'w-full md:w-1/6'} src={image} alt={'image'} />
 			<div className={'flex flex-col'}>
-				<p className={'font-medium text-lg'}>{post.title}</p>
-				<div className={'text-sm'}>{post.body}</div>
+				<p className={'font-medium text-sm md:text-lg'}>{post.title}</p>
+				<div className={'text-xs md:text-sm'}>{post.body}</div>
 			</div>
 		</Link>
 	);

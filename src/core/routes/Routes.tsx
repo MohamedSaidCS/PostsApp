@@ -1,4 +1,4 @@
-import {useRoutes} from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import Posts from '../../pages/Posts/Posts';
 import Post from '../../pages/Post/Post';
@@ -11,6 +11,7 @@ const Routes = () => {
 				{ path: 'posts/:id', element: <Post /> },
 			]
 		},
+		{ path: '*', element: <Navigate to={'/'} /> },
 	]);
 };
 
